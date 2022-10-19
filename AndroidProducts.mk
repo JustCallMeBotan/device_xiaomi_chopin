@@ -16,9 +16,13 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_chopin.mk 
+    $(LOCAL_DIR)/aosp_chopin.mk \
+    $(LOCAL_DIR)/aosp_choping.mk
 
 COMMON_LUNCH_CHOICES := \
     aosp_chopin-user \
     aosp_chopin-userdebug \
-    aosp_chopin-eng 
+    aosp_chopin-eng \
+    aosp_choping-user \
+    aosp_choping-userdebug \
+    aosp_choping-eng
