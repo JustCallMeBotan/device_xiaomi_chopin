@@ -29,8 +29,20 @@ $(call inherit-product, vendor/aosp/config/phone.mk)
 PRODUCT_DEVICE := chopin
 PRODUCT_NAME := aosp_chopin
 PRODUCT_BRAND := Redmi
+ifeq ($(IS_GLOBAL),true)
+PRODUCT_MODEL := 21061110AG
+else
 PRODUCT_MODEL := M2104K10AC
+endif
 PRODUCT_MANUFACTURER := Xiaomi
+
+BUILD_FINGERPRINT := "google/raven/raven:12/SQ3A.220705.003.A1/8672226:user/release-keys"
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+        PRIVATE_BUILD_DESC="raven-user 12 SP3A.220705.003.A1 8672226 release-keys" \
+        PRODUCT_NAME="chopin"
+
+PRODUCT_PROPERTY_OVERRIDES += ro.build.fingerprint=google/raven/raven:12/SQ3A.220705.003.A1/8672226:user/release-keys
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
